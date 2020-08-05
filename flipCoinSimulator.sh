@@ -2,13 +2,15 @@
 
 echo "Welcome to flip coin simulation"
 
-isHead=1
-result=$((RANDOM%2+1))
-
-
-if(( $isHead == $result))
+count=0
+while (( $count < 50 ))
+do
+((count++))
+coinFlip=$((RANDOM%2))
+if (( $(( $coinFlip==1 )) ))
 then
-	echo "Head"
+        echo "Head"
 else
-	echo "Tail"
+        echo "Tail"
 fi
+done
